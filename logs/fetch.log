@@ -59,3 +59,19 @@
 2026-06-09 18:33:36,053 [INFO] MSN: ✓ 1 dòng
 2026-06-09 18:33:38,337 [INFO] BID: ✓ 1 dòng
 2026-06-09 18:33:38,337 [INFO] === Xong: 10/10 tickers | 10 dòng mới ===
+2026-06-10 19:55:55,894 [INFO] Fetch từ 2026-06-09 → 2026-06-09
+2026-06-10 19:55:57,075 [INFO] Failed to extract font properties from /usr/share/fonts/truetype/noto/NotoColorEmoji.ttf: Can not load face (unknown file format; error code 0x2)
+2026-06-10 19:55:59,415 [INFO] generated new fontManager
+2026-06-10 19:56:02,155 [INFO] Device registered: 6868ff1a056fe10b9fe90e5ae95cbb21 (version 0.0.1)
+2026-06-10 19:56:06,853 [INFO] VCB: ✓ 1 dòng
+2026-06-10 19:56:09,766 [INFO] VIC: ✓ 1 dòng
+2026-06-10 19:56:12,265 [INFO] VHM: ✓ 1 dòng
+2026-06-10 19:56:14,825 [INFO] HPG: ✓ 1 dòng
+2026-06-10 19:56:17,509 [INFO] TCB: ✓ 1 dòng
+2026-06-10 19:56:20,143 [INFO] MBB: ✓ 1 dòng
+2026-06-10 19:56:22,919 [INFO] VNM: ✓ 1 dòng
+2026-06-10 19:56:25,490 [INFO] FPT: ✓ 1 dòng
+2026-06-10 19:56:35,893 [WARNING] Handshake thất bại: HTTPSConnectionPool(host='trading.vietcap.com.vn', port=443): Read timed out. (read timeout=10)
+2026-06-10 19:56:37,746 [INFO] MSN: ✓ 1 dòng
+2026-06-10 19:56:40,575 [INFO] BID: ✓ 1 dòng
+2026-06-10 19:56:40,575 [INFO] === Xong: 10/10 tickers | 10 dòng mới ===
