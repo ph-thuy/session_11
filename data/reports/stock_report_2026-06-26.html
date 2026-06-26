@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VN Stock Daily Briefing — 2026-06-26</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f0f2f5; color: #1a1a2e; font-size: 13px; }
+  .page { max-width: 1100px; margin: 0 auto; padding: 12px; display: grid; gap: 10px; }
+  header { background: linear-gradient(135deg, #0f3460, #16213e); color: white; border-radius: 10px; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; }
+  header h1 { font-size: 18px; font-weight: 700; letter-spacing: 0.3px; }
+  header .meta { font-size: 11px; opacity: 0.8; text-align: right; line-height: 1.6; }
+  .grid-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .card { background: white; border-radius: 8px; padding: 12px; box-shadow: 0 1px 4px rgba(0,0,0,0.08); }
+  .card h2 { font-size: 12px; font-weight: 600; color: #666; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+  table { width: 100%; border-collapse: collapse; font-size: 12px; }
+  th { background: #f8f9fa; color: #555; font-weight: 600; padding: 6px 8px; text-align: left; border-bottom: 2px solid #e9ecef; }
+  td { padding: 5px 8px; border-bottom: 1px solid #f0f0f0; }
+  tr:hover td { background: #fafbff; }
+  .ticker { font-weight: 700; color: #0f3460; }
+  .up { color: #22c55e; font-weight: 600; }
+  .down { color: #ef4444; font-weight: 600; }
+  .flat { color: #94a3b8; }
+  .badge { display: inline-block; padding: 2px 7px; border-radius: 10px; font-size: 11px; font-weight: 600; }
+  .badge-green { background: #dcfce7; color: #166534; }
+  .badge-yellow { background: #fef9c3; color: #854d0e; }
+  .badge-red { background: #fee2e2; color: #991b1b; }
+  .badge-sideway { background: #f1f5f9; color: #64748b; }
+  .picks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .pick-card { border-radius: 7px; padding: 10px 12px; border-left: 4px solid; }
+  .pick-1 { background: #f0fdf4; border-color: #22c55e; }
+  .pick-2 { background: #eff6ff; border-color: #3b82f6; }
+  .pick-3 { background: #fefce8; border-color: #eab308; }
+  .pick-card .label { font-size: 10px; font-weight: 700; text-transform: uppercase; color: #666; margin-bottom: 3px; }
+  .pick-card .name { font-size: 16px; font-weight: 800; color: #0f3460; }
+  .pick-card .stat { font-size: 11px; color: #555; margin: 3px 0; }
+  .pick-card .reason { font-size: 11.5px; color: #374151; line-height: 1.5; margin-top: 5px; }
+  canvas { max-height: 200px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <div>
+      <h1>📈 VN Stock Daily Briefing — 26/06/2026</h1>
+      <div style="font-size:11px;opacity:0.7;margin-top:3px;">Data đến: 24/06/2026 &nbsp;|&nbsp; 10 mã theo dõi &nbsp;|&nbsp; Phân tích: 30 ngày gần nhất</div>
+    </div>
+    <div class="meta">Cập nhật lúc 07:00<br>Thứ Sáu, 26/06/2026</div>
+  </header>
+
+  <!-- Top Picks -->
+  <div class="card">
+    <h2>🏆 Top Picks Hôm Nay</h2>
+    <div class="picks">
+      <div class="pick-card pick-1">
+        <div class="label">#1 — Nên xem xét</div>
+        <div class="name">VIC</div>
+        <div class="stat">Return 30D: <strong class="up">+5.35%</strong> &nbsp;|&nbsp; Vol: 3.26%</div>
+        <div class="reason">VIC là mã duy nhất có return 30D dương và đang hồi phục mạnh từ đáy giữa tháng 6. Đà tăng cuối tháng (tuần 23–24/6 tăng ~7%) cho thấy dòng tiền quay lại. Rủi ro: volatility cao hơn nhóm, cần đặt stop-loss chặt.</div>
+      </div>
+      <div class="pick-card pick-2">
+        <div class="label">#2 — Nên xem xét</div>
+        <div class="name">MBB</div>
+        <div class="stat">Return 30D: <strong class="flat">0.0%</strong> &nbsp;|&nbsp; Vol: 1.64%</div>
+        <div class="reason">MBB giữ vững mức giá trong 30 ngày với biến động thấp nhất nhóm ngân hàng. Mã đang sideway quanh 24.8, volume 7 ngày giảm — cho thấy tích lũy hơn là phân phối. Phù hợp với nhà đầu tư ưu tiên bảo toàn vốn.</div>
+      </div>
+      <div class="pick-card pick-3">
+        <div class="label">#3 — Nên xem xét</div>
+        <div class="name">VNM</div>
+        <div class="stat">Return 30D: <strong class="down">-1.35%</strong> &nbsp;|&nbsp; Vol: 1.50%</div>
+        <div class="reason">VNM có volatility thấp nhất danh mục (1.50%), phù hợp với chiến lược phòng thủ. Giá dao động hẹp quanh 58–59, không có dấu hiệu breakdown. Cân nhắc mua dần nếu giá về vùng 57.5–58.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-2col">
+    <!-- Summary Table -->
+    <div class="card">
+      <h2>📊 Bảng Tóm Tắt 10 Mã</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Mã</th>
+            <th>Giá</th>
+            <th>Return 30D</th>
+            <th>Volatility</th>
+            <th>Xu hướng</th>
+            <th>Đánh giá</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="ticker">VIC</td><td>230.5</td>
+            <td class="up">+5.35%</td><td>3.26%</td>
+            <td><span class="badge badge-sideway">Sideway</span></td>
+            <td><span class="badge badge-green">✅ Xem xét</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">MBB</td><td>24.8</td>
+            <td class="flat">0.0%</td><td>1.64%</td>
+            <td><span class="badge badge-sideway">Sideway</span></td>
+            <td><span class="badge badge-green">✅ Xem xét</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">VNM</td><td>58.3</td>
+            <td class="down">-1.35%</td><td>1.50%</td>
+            <td><span class="badge badge-sideway">Sideway</span></td>
+            <td><span class="badge badge-green">✅ Xem xét</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">BID</td><td>42.1</td>
+            <td class="down">-2.09%</td><td>1.92%</td>
+            <td><span class="badge badge-sideway">Sideway</span></td>
+            <td><span class="badge badge-yellow">⚠️ Theo dõi</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">TCB</td><td>32.5</td>
+            <td class="down">-0.15%</td><td>1.97%</td>
+            <td><span class="badge badge-red" style="background:#fee2e2;color:#991b1b;">Giảm</span></td>
+            <td><span class="badge badge-yellow">⚠️ Theo dõi</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">VHM</td><td>159.6</td>
+            <td class="up">+0.57%</td><td>3.55%</td>
+            <td><span class="badge badge-red" style="background:#fee2e2;color:#991b1b;">Giảm</span></td>
+            <td><span class="badge badge-yellow">⚠️ Theo dõi</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">HPG</td><td>23.5</td>
+            <td class="down">-2.49%</td><td>1.79%</td>
+            <td><span class="badge badge-red" style="background:#fee2e2;color:#991b1b;">Giảm</span></td>
+            <td><span class="badge badge-yellow">⚠️ Theo dõi</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">FPT</td><td>70.8</td>
+            <td class="down">-2.34%</td><td>2.16%</td>
+            <td><span class="badge badge-red" style="background:#fee2e2;color:#991b1b;">Giảm</span></td>
+            <td><span class="badge badge-red">❌ Tránh</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">VCB</td><td>61.0</td>
+            <td class="down">-4.24%</td><td>1.75%</td>
+            <td><span class="badge badge-red" style="background:#fee2e2;color:#991b1b;">Giảm</span></td>
+            <td><span class="badge badge-red">❌ Tránh</span></td>
+          </tr>
+          <tr>
+            <td class="ticker">MSN</td><td>71.5</td>
+            <td class="down">-7.38%</td><td>1.88%</td>
+            <td><span class="badge badge-red" style="background:#fee2e2;color:#991b1b;">Giảm</span></td>
+            <td><span class="badge badge-red">❌ Tránh</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Chart -->
+    <div class="card">
+      <h2>📉 Performance 30 Ngày (chuẩn hóa về 100)</h2>
+      <canvas id="perfChart"></canvas>
+    </div>
+  </div>
+</div>
+
+<script>
+const labels = ["25/5","26/5","27/5","28/5","29/5","1/6","2/6","3/6","4/6","5/6","8/6","9/6","10/6","11/6","12/6","15/6","16/6","17/6","18/6","19/6","22/6","23/6","24/6"];
+
+const datasets = [
+  { label: 'VIC', data: [100.0,97.35,96.34,96.34,96.57,93.65,93.65,90.31,91.5,94.61,89.12,88.3,89.58,89.58,89.35,88.03,88.67,87.75,93.88,93.92,100.46,104.66,105.35], borderColor: '#2563eb', backgroundColor: 'transparent', borderWidth: 2, pointRadius: 0, tension: 0.3 },
+  { label: 'MBB', data: [100.0,102.82,102.42,100.81,100.81,101.21,99.4,101.61,100.81,100.81,99.19,99.4,99.6,99.8,100.2,101.61,101.21,101.61,101.81,100.81,100.0,100.0,100.0], borderColor: '#16a34a', backgroundColor: 'transparent', borderWidth: 2, pointRadius: 0, tension: 0.3 },
+  { label: 'VNM', data: [100.0,100.0,99.49,99.83,100.17,100.0,99.15,98.65,99.15,98.82,98.14,98.65,99.66,100.17,99.83,101.02,100.0,99.83,100.17,99.83,99.15,98.82,98.65], borderColor: '#ca8a04', backgroundColor: 'transparent', borderWidth: 2, pointRadius: 0, tension: 0.3 },
+  { label: 'BID', data: [100.0,101.4,100.7,98.84,97.67,97.44,96.98,97.44,99.19,97.67,95.35,95.7,96.86,96.28,95.47,96.74,97.44,99.88,99.42,97.21,98.72,99.19,97.91], borderColor: '#9333ea', backgroundColor: 'transparent', borderWidth: 1.5, pointRadius: 0, tension: 0.3, borderDash: [4,2] },
+  { label: 'TCB', data: [100.0,101.08,103.38,100.15,100.61,99.39,98.0,96.93,96.62,97.39,94.78,94.93,95.08,94.78,96.01,97.39,97.54,96.62,95.85,95.08,94.93,98.46,99.85], borderColor: '#0891b2', backgroundColor: 'transparent', borderWidth: 1.5, pointRadius: 0, tension: 0.3, borderDash: [4,2] },
+  { label: 'MSN', data: [100.0,99.74,99.09,97.8,96.76,96.76,94.82,97.28,95.85,94.69,91.71,93.78,93.13,91.97,92.1,93.52,94.56,93.91,93.39,93.26,92.62,92.62,92.62], borderColor: '#ef4444', backgroundColor: 'transparent', borderWidth: 1.5, pointRadius: 0, tension: 0.3 },
+  { label: 'VCB', data: [100.0,101.1,100.78,98.59,97.33,97.65,96.7,97.17,97.65,96.86,96.23,96.55,96.86,96.7,96.7,96.7,97.02,97.65,96.7,96.86,96.23,96.23,95.76], borderColor: '#f97316', backgroundColor: 'transparent', borderWidth: 1.5, pointRadius: 0, tension: 0.3 },
+];
+
+new Chart(document.getElementById('perfChart'), {
+  type: 'line',
+  data: { labels, datasets },
+  options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    plugins: {
+      legend: { position: 'bottom', labels: { boxWidth: 12, font: { size: 10 }, padding: 8 } },
+      tooltip: { mode: 'index', intersect: false }
+    },
+    scales: {
+      x: { ticks: { font: { size: 9 }, maxTicksLimit: 8 }, grid: { display: false } },
+      y: { ticks: { font: { size: 10 } }, grid: { color: '#f0f0f0' } }
+    },
+    interaction: { mode: 'nearest', axis: 'x', intersect: false }
+  }
+});
+</script>
+</body>
+</html>
